@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Intro() {
     return (
-        <div className="intro">
+        <div className="intro" id="main">
             <div className="container">
                 <h1 className="intro__title">Первый курс<br/>по компьютерной сборке</h1>
                 <div className="timer">

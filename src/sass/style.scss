@@ -49,9 +49,6 @@ body {
         padding: 0 20px;
     }
 
-    &__logo {
-    }
-
     &__nav {
         display: flex;
         gap: 40px;
@@ -122,9 +119,6 @@ body {
         @media (max-width: $md5) {
             font-size: 40px;
         }
-    }
-
-    &>.intro__stats {
     }
 }
 .timer {
@@ -210,9 +204,6 @@ body {
 
     background-color: #121212;
     padding: 28px 0;
-
-    &__students {
-    }
 }
 .students {
 
@@ -319,12 +310,6 @@ body {
     }
 }
 
-.stats {
-
-    &__students {
-    }
-}
-
 .about {
     display: flex;
     justify-content: space-between;
@@ -391,7 +376,7 @@ body {
 
     gap: 80px;
 
-    padding: 200px 0 50px 0;
+    padding: 220px 0 70px 0;
 
     &__header {
         display: flex;
@@ -511,7 +496,7 @@ body {
         gap: 20px;
 
         @media (max-width: $md3) {
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 80px;
         }
     }
@@ -598,9 +583,51 @@ body {
 }
 
 .program {
-    display: flex;
-    justify-content: center;
-    padding: 120px 0;
+    padding: 20px 0 160px 0;
+
+    @media (max-width: $md3) {
+        padding: 40px 0;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    &__img {
+        width: 130px;
+        height: 130px;
+        transform: rotate(180deg);
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 140%;
+
+        color: #FFFFFF;
+
+        @media (max-width: $md3) {
+            font-size: 38px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
+
+    &__weeks-tree {
+        display: flex;
+        justify-content: center;
+    }
 
     &__weeks-left {
         display: flex;
@@ -658,4 +685,207 @@ body {
     height: 2px;
     background-color: #fff;
     opacity: 0.3;
+}
+
+/* Перестройка блока weeks-tree */
+
+@media (max-width: $md4) {
+    .program {
+        padding: 20px 0 100px 0;
+
+        &__weeks-tree {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__stick {
+            display: none;
+        }
+    }
+
+    .week__arrow {
+        display: none;
+    }
+
+    .weeks {
+        text-align: center;
+        gap: 40px;
+    }
+}
+
+.teachers {
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 140%;
+        
+        color: #FFFFFF;
+
+        @media (max-width: $md3) {
+            text-align: center;
+            font-size: 38px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 120px 0;
+
+        @media (max-width: $md3) {
+            flex-direction: column;
+            gap: 60px;
+            padding: 60px 0;
+        }
+    }
+}
+
+.teacher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex: 0 0 33.333%;
+
+    padding: 20px 10px;
+
+    gap: 25px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 140%;
+
+        color: #FFFFFF;
+    }
+
+    &__job {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #FFFFFF;
+
+        opacity: 0.8;
+    }
+}
+.btn-teacher {
+
+    &__bio {
+        background: transparent;
+        border: #fff 1px solid;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 35px;
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 140%;
+
+        color: #FFFFFF;
+
+        @media (max-width: $md3) {
+            font-size: 42px;
+        }
+        @media (max-width: 345px) {
+            font-size: 36px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #FFFFFF;
+
+        text-align: center;
+        max-width: 70%;
+
+        opacity: 0.5;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 30px;
+    }
+
+    &__toggler {
+        display: flex;
+        border-radius: 50px;
+
+        width: 75%;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    &__social {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__social-icon {
+        padding: 10px;
+        border-radius: 50%;
+        background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    }
+
+    &__copyright {
+        font-weight: 400;
+        font-size: 12px;
+        padding: 20px 0 40px 0;
+        line-height: 160%;
+
+        opacity: 0.6;
+
+        color: #FFFFFF;
+    }
+}
+
+.footer {
+    padding: 60px 0;
+
+    &__toggler {
+        position: relative;
+        z-index: 1000000;
+        display: flex;
+    }
+
+    @media (max-width: $md4) {
+        padding: 30px 0;
+    }
+}
+.footer__toggler {
+    display: flex;
+    transition: all .5s ease;
+}
+.toggler-item {
+    transition: all .5s ease;
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
 }

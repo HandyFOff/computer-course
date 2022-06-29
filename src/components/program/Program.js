@@ -28,10 +28,22 @@ export default function Program() {
     separatorElements(weeksElements)
 
     return (
-        <section className="program">
-            <div className="program__weeks-left weeks">{weeks_left}</div>
-            <div className="program__stick"></div>
-            <div className="program__weeks-right weeks">{weeks_right}</div>
+        <section className="program" id="timetable">
+            <div className="program__header">
+                <img className="program__img" alt="program img" src={require('../../assets/img/main-icon.png')}/>
+                <h1 className="program__title">Программа обучения</h1>
+                <span className="program__subtitle">Больше 90% учеников прошли полный курс и смогли<br/> собрать свой первый компьютер</span>
+            </div>
+            {window.innerWidth > 576 ?
+            <div className="program__weeks-tree">
+                <div className="program__weeks-left weeks">{weeks_left}</div>
+                <div className="program__stick"></div>
+                <div className="program__weeks-right weeks">{weeks_right}</div>
+            </div> : null}
+            {window.innerWidth <= 576 ?
+            <div className="program__weeks-tree">
+                <div className="program__weeks-left weeks">{weeksElements}</div>
+            </div> : null}
         </section>
     )
 }

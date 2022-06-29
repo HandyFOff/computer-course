@@ -5,6 +5,7 @@ import Program from "./program/Program";
 import Quality from "./quality/Quality";
 import Sponsers from "./sponsers/Sponsers";
 import Start from "./start/Start";
+import Teachers from "./teachers/Teachers";
 
 export default function Main() {
     return (
@@ -16,6 +17,7 @@ export default function Main() {
                 <Quality/>
                 <Sponsers/>
                 <Program/>
+                <Teachers/>
             </div>
         </main>
     )

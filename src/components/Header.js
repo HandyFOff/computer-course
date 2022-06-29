@@ -16,12 +16,12 @@ export default function Header() {
             <div className="header__container">
                 <img className="header__logo" alt="logotype" src={require('../assets/img/logo.png')}/>
                 <nav className="header__nav nav">
-                    <a className="nav__item" href="#">Главная</a>
-                    <a className="nav__item" href="#">Курсы</a>
-                    <a className="nav__item" href="#">Расписание</a>
-                    <a className="nav__item" href="#">Преподаватели</a>
-                    <a className="nav__item" href="#">Рассылка</a>
-                    <a className="nav__item" href="#">Контакты</a>
+                    <a className="nav__item" href="#main">Главная</a>
+                    <a className="nav__item" href="#course">Курсы</a>
+                    <a className="nav__item" href="#timetable">Расписание</a>
+                    <a className="nav__item" href="#teachers">Преподаватели</a>
+                    <a className="nav__item" href="#contacts">Рассылка</a>
+                    <a className="nav__item" href="#contacts">Контакты</a>
                 </nav>
                 <button className="header__btn-login btn">Зайти в кабинет</button>
             </div>

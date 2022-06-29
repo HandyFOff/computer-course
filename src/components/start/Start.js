@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Start() {
     return (
-        <section className="start">
+        <section className="start" id="course">
             <div className="start__header">
                 <h1 className="start__title">Быстрый старт</h1>
                 <p className="start__desc">Больше 90% учеников прошли полный курс и смогли<br/> собрать свой первый компьютер</p>
